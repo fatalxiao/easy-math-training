@@ -3,13 +3,14 @@ import Root from './modules/Root/Root.tsx';
 import App from './modules/App/App.tsx';
 
 // Vendors
-import {createBrowserRouter} from 'react-router-dom';
+import {createHashRouter} from 'react-router-dom';
 
-const route = createBrowserRouter([{
+const route = createHashRouter([{
     path: '/',
     element: <Root/>,
     children: [{
-        path: 'app',
+        index: true,
+        // path: 'app',
         element: <App/>
     }]
 }]);
