@@ -11,6 +11,12 @@ import {Outlet} from 'react-router-dom';
 // Statics
 import {theme as antdTheme} from 'antd';
 
+// Vendors
+import classNames from 'classnames';
+
+// Styles
+import style from './style.ts';
+
 // Types
 import {Theme} from './ThemeContext.ts';
 
@@ -40,7 +46,8 @@ const Root = () => {
                     :
                     antdTheme.defaultAlgorithm
             }}>
-                <div className="root">
+                <div className={classNames('root', `theme-${theme}`)}
+                     css={style}>
                     <Outlet/>
                 </div>
             </ConfigProvider>
