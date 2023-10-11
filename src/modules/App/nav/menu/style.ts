@@ -2,5 +2,6 @@
 import {css} from '@emotion/react';
 
 export default css`
-    padding: 24px;
+    width: 40px;
+    padding: 0 !important;
 `;
