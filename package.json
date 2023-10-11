@@ -6,8 +6,12 @@
     "scripts": {
         "dev": "vite --host",
         "build": "tsc && vite build",
-        "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "start-electron": "electron main.ts",
+        "build-electron-win": "electron-builder build --win",
+        "start": "electron-forge start",
+        "package": "electron-forge package",
+        "make": "electron-forge make"
     },
     "dependencies": {
         "@ant-design/icons": "^5.2.6",
@@ -21,6 +25,7 @@
         "react-router-dom": "^6.16.0"
     },
     "devDependencies": {
+        "@electron-forge/cli": "^6.4.2",
         "@emotion/eslint-plugin": "^11.11.0",
         "@types/lodash": "^4.14.199",
         "@types/node": "^20.8.4",
@@ -29,6 +34,8 @@
         "@typescript-eslint/eslint-plugin": "^6.7.5",
         "@typescript-eslint/parser": "^6.7.5",
         "@vitejs/plugin-react": "^4.1.0",
+        "electron": "^27.0.0",
+        "electron-vite": "^1.0.28",
         "eslint": "^8.51.0",
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-react-refresh": "^0.4.3",
