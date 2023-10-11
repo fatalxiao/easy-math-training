@@ -285,7 +285,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         border-radius: 8vw;
         padding: 0;
     }
-`,n4=()=>{const[e,t]=v.useState(5),n=v.useCallback((l=5)=>e4(10**(l-1),10**l-1),[]),[r,o]=v.useState(n(e)),i=v.useCallback(l=>{t(l),o(n(l))},[n]),a=v.useCallback(()=>{o(n(e))},[n]);return Ea("div",{className:"random-number",css:t4,children:[_e(zT,{className:"random-number-input",value:r,bordered:!1,readOnly:!0,size:"large"}),_e(qT,{className:"random-number-digit",options:[4,5,6],size:"large",value:e,onChange:i}),_e(wu,{className:"random-number-refresh-button",type:"primary",size:"large",onClick:a,children:"Refresh"})]})},r4=qw([{path:"/",element:_e(l5,{}),children:[{path:"app",element:_e(w5,{}),children:[{path:"random-number",element:_e(n4,{})}]}]}]);var xS,Am=bh;xS=Am.createRoot,Am.hydrateRoot;const o4=io`
+`,n4=()=>{const[e,t]=v.useState(5),n=v.useCallback((l=5)=>e4(10**(l-1),10**l-1),[]),[r,o]=v.useState(n(e)),i=v.useCallback(l=>{t(l),o(n(l))},[n]),a=v.useCallback(()=>{o(n(e))},[e,n]);return Ea("div",{className:"random-number",css:t4,children:[_e(zT,{className:"random-number-input",value:r,bordered:!1,readOnly:!0,size:"large"}),_e(qT,{className:"random-number-digit",options:[4,5,6],size:"large",value:e,onChange:i}),_e(wu,{className:"random-number-refresh-button",type:"primary",size:"large",onClick:a,children:"Refresh"})]})},r4=qw([{path:"/",element:_e(l5,{}),children:[{path:"app",element:_e(w5,{}),children:[{path:"random-number",element:_e(n4,{})}]}]}]);var xS,Am=bh;xS=Am.createRoot,Am.hydrateRoot;const o4=io`
     html,
     body {
         margin: 0;

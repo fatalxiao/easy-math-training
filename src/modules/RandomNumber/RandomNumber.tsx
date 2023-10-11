@@ -34,6 +34,7 @@ const RandomNumber = () => {
     const refresh = useCallback(() => {
         setNumber(getRandomNumber(digit));
     }, [
+        digit,
         getRandomNumber
     ]);
 
