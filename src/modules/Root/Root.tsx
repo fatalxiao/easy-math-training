@@ -1,5 +1,6 @@
 // Hooks
 import {useState, useCallback} from 'react';
+import {useLocation} from 'react-router-dom';
 
 // Contexts
 import ThemeContext from './ThemeContext.ts';
@@ -22,6 +23,7 @@ import {Theme} from './ThemeContext.ts';
 
 const Root = () => {
 
+    const location = useLocation();
     const [theme, setTheme] = useState(Theme.LIGHT);
 
     /**
@@ -49,7 +51,9 @@ const Root = () => {
                 <div className={classNames('root', `theme-${theme}`)}
                      css={style}>
                     <Outlet/>
-                    <Navigate to="/app"/>
+                    {location.pathname === '/' && (
+                        <Navigate to="/app"/>
+                    )}
                 </div>
             </ConfigProvider>
         </ThemeContext.Provider>

@@ -7,31 +7,30 @@ export default css`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 16vh;
+    gap: 12vh;
 
     .random-number-input {
+        padding: 0;
+        line-height: 0;
         text-align: center;
         font-size: 20vw;
     }
 
-    .random-number-digit {
-
-        .ant-segmented-item-label {
-            width: 16vw;
-            height: 12vw;
-            min-height: 0;
-            line-height: 12vw;
-            padding: 0;
-            font-size: 4vw;
-        }
+    .random-number-digit .ant-segmented-item-label {
+        width: 16vw;
+        height: 12vw;
+        min-height: 0;
+        line-height: 12vw;
+        padding: 0;
+        font-size: 4vw;
     }
 
     .random-number-refresh-button {
-        width: 60%;
-        height: 16vw;
-        line-height: 16vw;
-        font-size: 8vw;
-        border-radius: 8vw;
+        width: 50%;
+        height: 12vw;
+        line-height: 12vw;
+        font-size: 6vw;
+        border-radius: 6vw;
         padding: 0;
     }
 `;
