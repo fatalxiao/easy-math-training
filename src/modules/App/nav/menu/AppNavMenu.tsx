@@ -11,7 +11,6 @@ const AppNavMenu = () => (
     <Button className="app-nav-menu"
             css={style}
             type="text"
-            size="large"
             icon={<MenuOutlined/>}/>
 );
 
