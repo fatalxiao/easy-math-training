@@ -1,5 +1,5 @@
 // Hooks
-import {useState} from 'react';
+import {useState, useCallback} from 'react';
 
 // Contexts
 import ThemeContext from './ThemeContext.ts';
@@ -18,9 +18,21 @@ const Root = () => {
 
     const [theme, setTheme] = useState(Theme.LIGHT);
 
+    /**
+     * 切换主题
+     */
+    const toggleTheme = useCallback(() => {
+        setTheme(currentTheme =>
+            currentTheme === Theme.DARK ?
+                Theme.LIGHT
+                :
+                Theme.DARK
+        );
+    }, []);
+
     return (
         <ThemeContext.Provider value={{
-            theme, setTheme
+            theme, setTheme, toggleTheme
         }}>
             <ConfigProvider theme={{
                 algorithm: theme === Theme.DARK ?

@@ -15,6 +15,8 @@ export interface ThemeContextType {
 
     setTheme?: Dispatch<SetStateAction<Theme>>;
 
+    toggleTheme?: () => void;
+
 }
 
 export default createContext<ThemeContextType>({

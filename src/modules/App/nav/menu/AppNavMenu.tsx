@@ -1,4 +1,7 @@
+// Components
 import {Button} from 'antd';
+
+// Icons
 import {MenuOutlined} from '@ant-design/icons';
 
 // Styles
@@ -8,9 +11,8 @@ const AppNavMenu = () => (
     <Button className="app-nav-menu"
             css={style}
             type="text"
-            size="large">
-        <MenuOutlined/>
-    </Button>
+            size="large"
+            icon={<MenuOutlined/>}/>
 );
 
 export default AppNavMenu;

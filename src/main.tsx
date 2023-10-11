@@ -12,7 +12,7 @@ import {Global} from '@emotion/react';
 // Style
 import style from './style.ts';
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById('container')!).render(
     <StrictMode>
         <Global styles={style}/>
         <RouterProvider router={router}/>
