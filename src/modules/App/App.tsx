@@ -1,8 +1,11 @@
-import './App.css';
+// Components
+import {Outlet} from 'react-router-dom';
+import Nav from './nav/AppNav';
 
 const App = () => (
     <div className="app">
-        app
+        <Nav/>
+        <Outlet/>
     </div>
 );
 

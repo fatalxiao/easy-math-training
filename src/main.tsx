@@ -6,13 +6,15 @@ import {RouterProvider} from 'react-router-dom';
 import router from './router.tsx';
 
 // Vendors
-import ReactDOM from 'react-dom/client';
+import {createRoot} from 'react-dom/client';
+import {Global} from '@emotion/react';
 
 // Style
-import './index.css';
+import style from './style.ts';
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById('root')!).render(
     <StrictMode>
+        <Global styles={style}/>
         <RouterProvider router={router}/>
     </StrictMode>
 );
