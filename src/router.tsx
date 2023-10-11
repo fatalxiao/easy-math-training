@@ -1,6 +1,7 @@
 // Components
-import Root from './modules/Root/Root.tsx';
-import App from './modules/App/App.tsx';
+import Root from './modules/Root/Root';
+import App from './modules/App/App';
+import RandomNumber from './modules/RandomNumber/RandomNumber';
 
 // Vendors
 import {createHashRouter} from 'react-router-dom';
@@ -9,9 +10,12 @@ const route = createHashRouter([{
     path: '/',
     element: <Root/>,
     children: [{
-        index: true,
-        // path: 'app',
-        element: <App/>
+        path: 'app',
+        element: <App/>,
+        children: [{
+            path: 'random-number',
+            element: <RandomNumber/>
+        }]
     }]
 }]);
 

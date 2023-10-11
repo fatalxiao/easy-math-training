@@ -6,7 +6,7 @@ import ThemeContext from './ThemeContext.ts';
 
 // Components
 import {ConfigProvider} from 'antd';
-import {Outlet} from 'react-router-dom';
+import {Outlet, Navigate} from 'react-router-dom';
 
 // Statics
 import {theme as antdTheme} from 'antd';
@@ -49,6 +49,7 @@ const Root = () => {
                 <div className={classNames('root', `theme-${theme}`)}
                      css={style}>
                     <Outlet/>
+                    <Navigate to="/app"/>
                 </div>
             </ConfigProvider>
         </ThemeContext.Provider>

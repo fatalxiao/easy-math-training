@@ -1,11 +1,18 @@
 // Components
-import {Outlet} from 'react-router-dom';
+import {Outlet, Navigate} from 'react-router-dom';
 import Nav from './nav/AppNav';
 
+// Styles
+import style from './style';
+
 const App = () => (
-    <div className="app">
+    <div className="app"
+         css={style}>
         <Nav/>
-        <Outlet/>
+        <div className="app-content">
+            <Outlet/>
+        </div>
+        <Navigate to="/app/random-number"/>
     </div>
 );
 
