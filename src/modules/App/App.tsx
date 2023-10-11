@@ -9,9 +9,7 @@ const App = () => (
     <div className="app"
          css={style}>
         <Nav/>
-        <div className="app-content">
-            <Outlet/>
-        </div>
+        <Outlet/>
         <Navigate to="/app/random-number"/>
     </div>
 );

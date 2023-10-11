@@ -7,5 +7,5 @@ export default css`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px;
+    padding: 4vw;
 `;

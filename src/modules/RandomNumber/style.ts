@@ -2,10 +2,12 @@
 import {css} from '@emotion/react';
 
 export default css`
+    flex: 1;
     display: flex;
-    height: 100%;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    padding: 8vw;
 
     .random-number-input {
         text-align: center;
