@@ -5,9 +5,11 @@ import {Button} from 'antd';
 import {MenuOutlined} from '@ant-design/icons';
 
 // Styles
-import style from './style.ts';
+import style from './style';
 
-const AppNavMenu = () => (
+import {ReactNode} from 'react';
+
+const AppNavMenu = (): ReactNode => (
     <Button className="app-nav-menu"
             css={style}
             type="text"

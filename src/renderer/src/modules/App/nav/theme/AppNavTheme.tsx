@@ -12,12 +12,13 @@ import Sun from 'icons/Sun';
 import Moon from 'icons/Moon';
 
 // Styles
-import style from './style.ts';
+import style from './style';
 
 // Types
 import {Theme} from 'modules/Root/ThemeContext';
+import {ReactNode} from 'react';
 
-const AppNavTheme = () => {
+const AppNavTheme = (): ReactNode => {
 
     const {theme, toggleTheme} = useContext(ThemeContext);
 

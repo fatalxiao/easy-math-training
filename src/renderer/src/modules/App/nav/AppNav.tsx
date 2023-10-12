@@ -3,9 +3,12 @@ import Menu from './menu/AppNavMenu';
 import Theme from './theme/AppNavTheme';
 
 // Styles
-import style from './style.ts';
+import style from './style';
 
-const AppNav = () => (
+// Types
+import {ReactNode} from 'react';
+
+const AppNav = (): ReactNode => (
     <div className="app-nav"
          css={style}>
         <Menu/>
