@@ -1,24 +1,8 @@
 {
-    "compilerOptions": {
-        "outDir": "./docs",
-        "composite": true,
-        "skipLibCheck": true,
-        "module": "ESNext",
-        "lib": [
-            "es5",
-            "esnext",
-            "dom"
-        ],
-        "jsx": "react-jsx",
-        "jsxImportSource": "@emotion/react",
-        "target": "es5",
-        "moduleResolution": "bundler",
-        "noImplicitAny": false,
-        "allowSyntheticDefaultImports": true,
-        "resolveJsonModule": true,
-        "baseUrl": "."
-    },
-    "include": [
-        "vite.config.ts"
-    ]
+  "extends": "@electron-toolkit/tsconfig/tsconfig.node.json",
+  "include": ["electron.vite.config.*", "src/main/*", "src/preload/*"],
+  "compilerOptions": {
+    "composite": true,
+    "types": ["electron-vite/node"]
+  }
 }
