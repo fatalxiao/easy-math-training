@@ -1,4 +1,28 @@
-node_modules
-dist
-out
+# Logs
+logs
 *.log*
+npm-debug.log*
+
+# Idea project files
+.idea
+
+# Vscode project files
+.editorconfig
+
+# os caches
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Dependency directories
+node_modules
+.sass-cache
+
+# Dist directories
+dist
+
+# vscode setting
+.vscode
+
+# Electron out directory
+out

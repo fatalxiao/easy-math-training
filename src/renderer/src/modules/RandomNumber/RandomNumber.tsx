@@ -8,9 +8,12 @@ import {Button, Input, Segmented} from 'antd';
 import random from 'lodash/random';
 
 // Styles
-import style from './style.ts';
+import style from './style';
 
-const RandomNumber = () => {
+// Types
+import {ReactNode} from 'react';
+
+const RandomNumber = (): ReactNode => {
 
     const [
         digit, setDigit

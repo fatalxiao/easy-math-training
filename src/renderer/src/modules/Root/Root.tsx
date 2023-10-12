@@ -3,7 +3,7 @@ import {useState, useCallback} from 'react';
 import {useLocation} from 'react-router-dom';
 
 // Contexts
-import ThemeContext from './ThemeContext.ts';
+import ThemeContext from './ThemeContext';
 
 // Components
 import {ConfigProvider} from 'antd';
@@ -16,12 +16,13 @@ import {theme as antdTheme} from 'antd';
 import classNames from 'classnames';
 
 // Styles
-import style from './style.ts';
+import style from './style';
 
 // Types
-import {Theme} from './ThemeContext.ts';
+import {Theme} from './ThemeContext';
+import {ReactNode} from 'react';
 
-const Root = () => {
+const Root = (): ReactNode => {
 
     const location = useLocation();
     const [theme, setTheme] = useState(Theme.LIGHT);

@@ -8,7 +8,10 @@ import Nav from './nav/AppNav';
 // Styles
 import style from './style';
 
-const App = () => {
+// Types
+import {ReactNode} from 'react';
+
+const App = (): ReactNode => {
 
     const location = useLocation();
 
