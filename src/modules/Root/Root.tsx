@@ -1,9 +1,9 @@
 // Hooks
-import {useState, useCallback} from 'react';
+import {useState, useCallback, useEffect} from 'react';
 import {useLocation} from 'react-router-dom';
 
 // Contexts
-import ThemeContext from './ThemeContext.ts';
+import ThemeContext from '../../contexts/ThemeContext.ts';
 
 // Components
 import {ConfigProvider} from 'antd';
@@ -19,7 +19,7 @@ import classNames from 'classnames';
 import style from './style.ts';
 
 // Types
-import {Theme} from './ThemeContext.ts';
+import {Theme} from '../../contexts/ThemeContext.ts';
 
 const Root = () => {
 
@@ -37,6 +37,23 @@ const Root = () => {
                 Theme.DARK
         );
     }, []);
+
+    /**
+     * 处理系统 theme 变更
+     */
+    const handleThemeChange = useCallback((e: MediaQueryListEvent) => {
+        setTheme(e.matches ? Theme.DARK : Theme.LIGHT);
+    }, []);
+
+    /**
+     * 监听是否暗黑模式
+     */
+    useEffect(() => {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', handleThemeChange);
+        return () => window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', handleThemeChange);
+    }, [
+        handleThemeChange
+    ]);
 
     return (
         <ThemeContext.Provider value={{

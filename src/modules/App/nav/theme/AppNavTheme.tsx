@@ -2,7 +2,7 @@
 import {useContext} from 'react';
 
 // Contexts
-import ThemeContext from 'modules/Root/ThemeContext';
+import ThemeContext from 'src/contexts/ThemeContext.ts';
 
 // Components
 import {Button} from 'antd';
@@ -15,7 +15,7 @@ import Moon from 'icons/Moon';
 import style from './style.ts';
 
 // Types
-import {Theme} from 'modules/Root/ThemeContext';
+import {Theme} from 'src/contexts/ThemeContext.ts';
 
 const AppNavTheme = () => {
 

@@ -1,4 +1,7 @@
+// Vendors
 import {createContext} from 'react';
+
+// Types
 import {Dispatch, SetStateAction} from 'react';
 
 export enum Theme {
