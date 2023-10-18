@@ -1,17 +1,22 @@
+// Hooks
+import {useBoolean} from 'ahooks';
+
 // Components
-import {Button} from 'antd';
+import AppNavMenuButton from './AppNavMenuButton';
+import AppNavMenuDrawer from './AppNavMenuDrawer';
 
-// Icons
-import {MenuOutlined} from '@ant-design/icons';
+const AppNavMenu = () => {
 
-// Styles
-import style from './style.ts';
+    const [open, {setTrue: show, setFalse: hide}] = useBoolean(false);
 
-const AppNavMenu = () => (
-    <Button className="app-nav-menu"
-            css={style}
-            type="text"
-            icon={<MenuOutlined/>}/>
-);
+    return (
+        <>
+            <AppNavMenuButton onClick={show}/>
+            <AppNavMenuDrawer open={open}
+                              onClose={hide}/>
+        </>
+    );
+
+};
 
 export default AppNavMenu;
