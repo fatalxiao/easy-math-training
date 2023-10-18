@@ -2,7 +2,7 @@
 import {css} from '@emotion/react';
 
 export default css`
-    min-height: 100vh;
+    height: ${window.innerHeight}px;
     transition: all 0.2s ease;
 
     &.theme-light {
