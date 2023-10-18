@@ -11,10 +11,14 @@ export default css`
 
     .numbers {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
+        padding: 0 25%;
 
-        * {
+        .times-input {
+            padding: 0;
+            line-height: 0;
+            text-align: center;
             font-size: 12vw;
         }
 

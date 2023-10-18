@@ -44,7 +44,10 @@ const MultiplicationOrally = () => {
                        bordered={false}
                        readOnly
                        size="large"/>
-                <span>×</span>
+                <Input className="times-input"
+                       value="×"
+                       bordered={false}
+                       readOnly/>
                 <Input className="random-number-input"
                        value={numberB}
                        bordered={false}
